@@ -1,0 +1,21 @@
+let express = require('express')
+let router = express.Router()
+let login = require('./API/login')
+let lesson = require('./API/lesson')
+let score = require('./API/score')
+
+router.get('/login', login.login)
+router.get('/show', login.show)
+router.get('/lesson/info', lesson.info)
+router.get('/lesson/update_info', lesson.update_info)
+router.get('/lesson/all_lesson', lesson.all_lesson)
+router.get('/lesson/search_lesson', lesson.search_lesson)
+router.get('/lesson/able_lesson', lesson.able_lesson)
+router.get('/lesson/add_lesson', lesson.add_lesson)
+router.get('/lesson/choosed_lesson', lesson.choosed_lesson)
+router.get('/lesson/history_lesson', lesson.history_lesson)
+router.get('/lesson/cancel_lesson', lesson.cancel_lesson)
+router.get('/score/my_score', score.my_score)
+router.get('/score/all_score', score.all_score)
+
+module.exports = router
