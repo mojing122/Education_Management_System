@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 登录页
+* @Author: MoJing
+-->
+
 <template>
   <div class="bg">
     <div id="login">

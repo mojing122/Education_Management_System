@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 网页内容模板——分数查询页
+* @Author: MoJing
+-->
+
 <template>
   <div id="dynamic-component-demo">
     <el-tabs>
@@ -36,6 +41,7 @@ export default {
     }
   },
   methods:{
+    //根据tab选中切换下方展示组件
     changeComponent(tabname) {
       if (tabname === '我的成绩') {
         this.currentComponent = 'myscore';

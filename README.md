@@ -1,6 +1,5 @@
 # 学生教务系统（选退课/查分功能）
 
-> 2022数据库组成原理课程设计—智能2001 沙志清
 
 ## Build Setup 运行方法
 
@@ -29,4 +28,48 @@ node server\app
 选课信息模块主要涉及查询、插入、删除操作，学生可以查看所有课程信息，可以根据课程号查询相关课程，可以在未选择过的可以中进行选课，可以查看自己已选择的课程和已经修读完的课程，可以将已选择但未修完的课程进行退课操作。
 分数信息模块主要涉及查询操作，学生可以查看自己各门课程的分数和详细信息，并显示该门课程的历史平均分，也可以查看所有课程的历史均分。
 
+## 项目目录
+``` bash
+jwxt
+├── index.html
+├── README.md
+├── server  后端API
+│   ├── API
+│   │   ├── lesson.js 选课操作函数
+│   │   ├── login.js  登录函数
+│   │   └── score.js  查分操作函数
+│   ├── app.js
+│   ├── db
+│   │   └── index.js  配置数据库
+│   └── router.js     API路由注册
+├── src
+│   ├── App.vue
+│   ├── assets
+│   │   ├── css
+│   │   ├── img
+│   │   ├── logo.ico
+│   │   └── logo.png
+│   ├── components    组件
+│   │   ├── AppHeader 网页头
+│   │   ├── AppMain   网页内容组件
+│   │   ├── AppNavbar 网页左侧导航栏组件
+│   │   ├── Lesson    选课操作组件
+│   │   └── Score     查分操作组件
+│   ├── main.js
+│   ├── router
+│   │   └── index.js  组件路由配置
+│   ├── store
+│   │   └── index.js  Vuex-store配置
+│   ├── util
+│   │   └── util.js
+│   └── views         页面框架
+│       ├── home.vue
+│       └── login.vue
+└── vue.config.js
+```
+## 网页预览
 
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)

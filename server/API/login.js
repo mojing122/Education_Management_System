@@ -1,5 +1,6 @@
 let db = require('../db/index')
 
+//登录操作
 exports.login = (req, res) => {
   var sql = 'select * from student where studentno = ? and password = ?'
   db.query(sql, [req.query.name, req.query.password], (err, data) => {
@@ -25,6 +26,7 @@ exports.login = (req, res) => {
   })
 }
 
+//登录反馈
 exports.show = (req, res) => {
   var sql = 'select * from student'
   db.query(sql, [req.query.name, req.query.password], (err, data) => {

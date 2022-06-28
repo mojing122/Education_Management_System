@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 全部分数查询组件
+* @Author: MoJing
+-->
+
 <template>
   <div>
     <el-table
@@ -46,10 +51,11 @@ export default {
     }
   },
   mounted() {
-    this.MyScore()
+    this.AllScore()
   },
   methods:{
-    MyScore(){axios.get('/score/all_score',{
+    //查询全部成绩
+    AllScore(){axios.get('/score/all_score',{
       params: {
         studentno: this.$cookies.get('Studentno')
       }

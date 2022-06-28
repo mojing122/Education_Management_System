@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 全部课程展示组件
+* @Author: MoJing
+-->
+
 <template>
   <div>
     <el-row :gutter="20" style="height: 50px">
@@ -57,6 +62,7 @@ export default {
     this.AllLesson()
   },
   methods:{
+    //查询所有课程
     AllLesson(){axios.get('/Lesson/all_lesson').then(res=>{
       //console.log(res.data);
       this.tableData = res.data
@@ -64,6 +70,8 @@ export default {
       console.log("获取数据失败" + err);
     })
     },
+
+    //根据课程号搜索
     SearchLesson(){
       if(this.input===''){this.AllLesson()} else {
       axios.get('/Lesson/search_lesson',{

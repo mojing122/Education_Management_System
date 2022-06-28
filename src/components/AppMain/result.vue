@@ -1,6 +1,7 @@
-/*
-选课结果页
-*/
+<!--
+* @FileDescription: 网页内容模板——选课结果页
+* @Author: MoJing
+-->
 
 <template>
 <div>
@@ -99,6 +100,7 @@ export default {
     this.HistoryLesson()
   },
   methods:{
+
     //查询本学期选课
     ChoosedLesson(){axios.get('/Lesson/choosed_lesson', {
       params: {
@@ -111,6 +113,7 @@ export default {
       console.log("获取数据失败" + err);
     })
     },
+
     //查询历史修读课程
     HistoryLesson(){axios.get('/Lesson/history_lesson', {
       params: {
@@ -123,6 +126,8 @@ export default {
       console.log("获取数据失败" + err);
     })
     },
+
+    //取消选课
     CancelLesson(courseno){axios.get('/Lesson/cancel_lesson', {
       params: {
         studentno: this.$cookies.get('Studentno'),
@@ -134,6 +139,8 @@ export default {
       console.log("获取数据失败" + err);
     })
     },
+
+    //判断表格行内容
     CancelSel(index, row) {
       this.CancelLesson(row['courseno'])
       //console.log(index, row);

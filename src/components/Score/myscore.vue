@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 个人分数查询组件
+* @Author: MoJing
+-->
+
 <template>
   <el-table
     :data="tableData"
@@ -60,6 +65,7 @@ export default {
     this.MyScore()
   },
   methods:{
+    //查询个人成绩
     MyScore(){axios.get('/score/my_score',{
       params: {
         studentno: this.$cookies.get('Studentno')

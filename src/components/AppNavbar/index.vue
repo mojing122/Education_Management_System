@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 网页左侧导航栏组件
+* @Author: MoJing
+-->
+
 <template>
   <div>
   <el-row class="tac">
@@ -31,6 +36,7 @@
 <script>
 export default {
   methods: {
+    //修改页面值
     OpenM(k) {
       this.$store.commit("changePage",k);
     },

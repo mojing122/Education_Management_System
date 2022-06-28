@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 学生个人信息描述组件
+* @Author: MoJing
+-->
+
 <template>
   <el-descriptions class="margin-top" title="基本信息" :column="3" border :key="key">
     <template slot="extra">
@@ -135,6 +140,7 @@ export default {
     this.Getinfo()
   },
   methods:{
+    //查询学生信息
     Getinfo(){axios.get('/Lesson/info',{
       params: {
         studentno: this.$cookies.get('Studentno')
@@ -154,6 +160,8 @@ export default {
         console.log("获取数据失败" + err);
       })
     },
+
+    //修改学生信息
     Updateinfo(){
       this.form.birthday=moment(this.form.birthday).format("YYYY-MM-DD")
       axios.get('/Lesson/update_info',{

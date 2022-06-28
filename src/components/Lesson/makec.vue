@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 选课组件
+* @Author: MoJing
+-->
+
 <template>
   <div style="text-align: center">
   <el-table
@@ -56,6 +61,8 @@ export default {
     this.AbleLesson()
   },
   methods: {
+
+    //查询可选课程
     AbleLesson(){axios.get('/Lesson/able_lesson',{
       params: {
         studentno: this.$cookies.get('Studentno')
@@ -68,6 +75,7 @@ export default {
     })
     },
 
+    //插入选课数据
     AddChoose(courseno){axios.get('/Lesson/add_lesson',{
       params: {
         studentno: this.$cookies.get('Studentno'),courseno:courseno
@@ -78,6 +86,7 @@ export default {
       console.log("获取数据失败" + err);
     })
     },
+
     // 获取选中的所有行信息,存到score表
     GetSel() {
       //console.log(this.$refs.multipleTable.selection)
@@ -90,6 +99,7 @@ export default {
       this.key+=1
     },
 
+    //全选/取消全选
     handleSelectionChange(val) {
       this.multipleSelection = val;
     }

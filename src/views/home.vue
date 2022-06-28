@@ -1,6 +1,7 @@
-/*
-主页
-*/
+<!--
+* @FileDescription: 主页
+* @Author: MoJing
+-->
 
 <template>
   <div id="app">

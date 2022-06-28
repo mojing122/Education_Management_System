@@ -1,3 +1,8 @@
+<!--
+* @FileDescription: 网页头组件
+* @Author: MoJing
+-->
+
 <template>
   <el-container id="header" class="myheader">
     <el-header>
@@ -26,6 +31,7 @@ export default {
     this.username = this.$route.query.name;
   },
   methods: {
+    //登出函数
     login_out(){
       this.$router.push({
         path: '/login',
